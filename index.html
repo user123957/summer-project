@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>深挖"三色"融合，创新生态思政 - 南京师范大学马克思主义学院</title>
+  <style>
+    p{
+      text-indent:2em;
+    }
+    h2{
+      text-align:center;
+    }
+    :root {
+        --green: #4CAF50;
+        --red: #F44336;
+        --yellow: #FFC107;
+        --dark: #333;
+        --light: #f9f9f9;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Microsoft YaHei", "SimHei", sans-serif;
+    }
+
+    body {
+        background-color: var(--light);
+        color: var(--dark);
+        line-height: 1.6;
+    }
+
+    header {
+        background: linear-gradient(135deg, var(--green), var(--red), var(--yellow));
+        color: white;
+        text-align: center;
+        padding: 3rem 1rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    header::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 10px;
+        background: linear-gradient(90deg, var(--green), var(--red), var(--yellow));
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+        font-weight: normal;
+        margin-bottom: 2rem;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+    }
+
+    .intro-section {
+        margin-bottom: 3rem;
+        padding: 2rem;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.green-section h2 {
+    border-color: var(--green);
+}
+
+.red-section h2 {
+    border-color: var(--red);
+}
+
+.yellow-section h2 {
+    border-color: var(--yellow);
+}
+
+.color-box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+/* 新增按钮容器样式 */
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+/* 新增按钮样式 */
+.color-button {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 30%;
+  min-width: 250px;
+  margin: 1rem 0;
+  color: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.color-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.button-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+}
+
+/* 保留原有的颜色定义 */
+.green { background-color: var(--green); }
+.red { background-color: var(--red); }
+.yellow { background-color: var(--yellow); color: var(--dark); }
+
+@media (max-width: 768px) {
+  .color-button {
+    width: 100%;
+  }
+}
+
+.color-item {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 30%;
+    min-width: 250px;
+    margin: 1rem 0;
+    color: white;
+
+}
+
+.color-item:hover {
+    transform: translateY(-5px);
+}
+
+.green {
+    background-color: var(--green);
+}
+
+.red {
+    background-color: var(--red);
+}
+
+.yellow {
+    background-color: var(--yellow);
+    color: var(--dark);
+}
+
+.color-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 250px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .color-item {
+        width: 100%;
+    }
+}
+    <!-- 添加到前面代码的<style>部分 -->
+footer {
+    background-color: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.social-links a {
+    font-size: 2rem;
+}
+    .message-board {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#message-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+#message-form input,
+#message-form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+#message-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+#message-form button {
+  padding: 12px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.message {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.message-header {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.message-content {
+  color: #555;
+  line-height: 1.5;
+}
+
+.message-date {
+  font-size: 12px;
+  color: #999;
+  margin-top: 8px;
+}
+    /* 评分板块样式 */
+.rating-section {
+  text-align: center;
+  margin-top: 40px;
+  padding: 30px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.rating {
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.stars {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.star {
+  color: #ddd;
+  transition: color 0.2s;
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.star:hover,
+.star.active {
+  color: #FFD700; /* 金色 */
+}
+
+#submit-rating {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+#submit-rating:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+#submit-rating:hover:not(:disabled) {
+  background: #45a049;
+}
+
+.hidden {
+  display: none;
+}
+
+#rating-result {
+  color: #4CAF50;
+  font-weight: bold;
+  margin-top: 15px;
+}
+  </style>
+</head>
+
+
+
+
+
+
+<body>
+<header>
+  <div class="container">
+    <h1>深挖"三色"融合，创新生态思政</h1>
+    <p class="subtitle">南京师范大学马克思主义学院"五湖薪火，三色先锋"生态文明保护实践团</p>
+  </div>
+</header>
+
+<main class="container">
+  <section class="intro-section">
+    <p>为探索"两山"理论湖区实践新路径，2025年7月，南京师范大学马克思主义学院"五湖薪火，三色先锋"生态文明保护实践团奔赴江苏省宿迁市泗洪县洪泽湖湿地及周边地区开展实地调研，探究绿色生态与红色文化在洪泽湖的融合之道。</p>
+  </section>
+  <!-- 添加到前面代码的<main>部分 -->
+  <section class="section green-section">
+    <h2>三色辉映，擘画创新蓝图</h2>
+    <p>团队召开多次线上会议，通过深入研讨与系统文献梳理，创新构建"绿""红""黄"三色研究框架。</p>
+
+    <div class="button-container">
+      <!-- 绿色按钮 - 跳转到生态页面 -->
+      <a href="https://user123957.github.io/hongzehu-reed/" target="_blank" title="点我即看芦苇荡详情" class="color-button green">
+        <div class="button-title">绿色生态</div>
+        <p>聚焦生态本体研究，选取洪泽湖湿地核心生态屏障——芦苇荡开展深入考察</p>
+      </a>
+
+      <!-- 红色按钮 - 跳转到文化页面 -->
+      <a href="#" class="color-button red">
+        <div class="button-title">红色文化</div>
+        <p>着力于红色精神传承，锚定复原新四军抗战场景的芦苇迷宫、工委岛等红色地标</p>
+      </a>
+
+      <!-- 黄色按钮 - 跳转到青年页面 -->
+      <a href="https://user123957.github.io/practical-experience/" target="_blank" title="点我即看社会实践心得" class="color-button yellow">
+        <div class="button-title">青春力量</div>
+        <p>作为团队的代表色，是红与绿的融合，象征着蓬勃的青春力量</p>
+      </a>
+    </div>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="media/1.png" alt="团队召开线上会议" loading="lazy">
+        <div class="gallery-caption">团队召开线上会议</div>
+      </div>
+      <div class="gallery-item">
+        <img src="media/2%20(1).png" alt="社会实践思维导图" loading="lazy">
+        <div class="gallery-caption">团队制作的社会实践思维导图</div>
+      </div>
+    </div>
+  </section>
+  <!-- 添加到前面代码的<main>部分 -->
+  <section class="section red-section">
+    <h2>精心筹备，夯实实践根基</h2>
+    <p>为保障实践活动行稳致远，团队特邀马克思主义学院王刚教授、吕云超书记担任指导老师，为实践选题、理论框架和研究方法提供精准指导。</p>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="media/4.png" alt="洪泽湖" loading="lazy">
+        <div class="gallery-caption">分工表</div>
+      </div>
+      <div class="gallery-item">
+        <img src="media/5.png" alt="策划案封面" loading="lazy">
+        <div class="gallery-caption">社会实践策划书</div>
+      </div>
+      <div class="gallery-item">
+        <img src="media/6.jpg" alt="团队制作的问卷" loading="lazy">
+        <div class="gallery-caption">团队制作的问卷</div>
+      </div>
+      <div class="gallery-item">
+        <img src="media/7.png" alt="访谈提纲" loading="lazy">
+        <div class="gallery-caption">团队制作的访谈提纲</div>
+      </div>
+      <div class="gallery-item">
+        <img src="media/8.jpg" alt="团队队旗" loading="lazy">
+        <div class="gallery-caption">团队设计制作的队旗</div>
+      </div>
+    </div>
+  </section>
+  <!-- 添加到前面代码的<main>部分 -->
+  <section class="section yellow-section">
+    <h2>实地躬行，挖掘"三色"魅力</h2>
+    <p>团队成员前往洪泽湖湿地和临淮镇胜利家园社区，展开扎实的调研。在芦苇荡实地考察，聆听工作人员对芦苇生态功能的讲解；在工委岛重温烽火岁月，感悟革命先辈在艰苦环境中展现的坚定信念；深入典型生态移民安置社区胜利家园，与居民面对面交流。</p>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="media/9.jpg" alt="参观纪念馆" loading="lazy">
+        <div class="gallery-caption">团队成员参观洪泽湖水上革命斗争纪念馆</div>
+      </div>
+      <div class="gallery-item">
+        <img src="media/10.jpg" alt="居民填写问卷" loading="lazy">
+        <div class="gallery-caption">胜利社区居民填写团队成员发放的线下问卷</div>
+      </div>
+      <div class="gallery-item">
+        <img src="media/11.jpg" alt="访谈社区居民" loading="lazy">
+        <div class="gallery-caption">团队成员访谈胜利社区居民</div>
+      </div>
+      <div class="gallery-item">
+        <img src="media/12.jpg" alt="与洪泽湖负责人合影" loading="lazy">
+        <div class="gallery-caption">团队成员与泗洪洪泽湖生态旅游度假区管理办公室主任合影</div>
+      </div>
+      <div class="gallery-item">
+        <img src="media/13.jpg" alt="与社区书记合影" loading="lazy">
+        <div class="gallery-caption">团队成员与泗洪县临淮镇胜利社区书记合影</div>
+      </div>
+    </div>
+  </section>
+  <!-- 添加到前面代码的<main>部分 -->
+  <section class="section green-section">
+    <h2>成果转化，传播"两山"新声</h2>
+    <p>实践归来，团队迅速投入成果转化与传播工作。开发系列微课，将生态知识与红色故事、思政教育有机融合，打造具有洪泽湖特色的实践育人新载体。</p>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="media/14.png" alt="系列微课" loading="lazy">
+        <div class="gallery-caption">团队制作系列微课</div>
+      </div>
+      <div class="gallery-item">
+        <img src="media/14%20(1).png" alt="红色文化" loading="lazy">
+        <div class="gallery-caption">红色文化宣传</div>
+      </div>
+      <div class="gallery-item">
+        <img src="media/14%20(2).jpg" alt="新媒体宣传" loading="lazy">
+        <div class="gallery-caption">新媒体宣传</div>
+      </div>
+      <div class="gallery-item">
+        <img src="media/15.jpg" alt="特色文创" loading="lazy">
+        <div class="gallery-caption">团队开发特色文创</div>
+      </div>
+      <div class="gallery-item">
+        <img src="media/16.png" alt="线上宣讲" loading="lazy">
+        <div class="gallery-caption">团队开展线上宣讲</div>
+      </div>
+      <div class="gallery-item">
+        <img src="media/17.png" alt="新媒体宣传" loading="lazy">
+        <div class="gallery-caption">团队成员开展新媒体宣传</div>
+      </div>
+      <div class="gallery-item">
+        <img src="media/18.jpg" alt="感谢信" loading="lazy">
+        <div class="gallery-caption">感谢信</div>
+      </div>
+      <div class="gallery-item">
+        <img src="media/18%20(2).jpg" alt="感谢信" loading="lazy">
+        <div class="gallery-caption">感谢信-续</div>
+      </div>
+    </div>
+  </section>
+  <!-- 添加到前面代码的<main>部分 -->
+  <section class="section red-section">
+    <h2>薪火相传，展望五湖征程</h2>
+    <p>此次洪泽湖之行，是"五湖薪火，三色先锋"生态文明保护实践团探索之旅的起点。未来，团队将秉持初心，在此次实践的基础上走遍中国五大湖，深入研究各湖区在融合绿色生态保护与红色精神传承过程中的多样化路径与创新经验，持续为生态文明建设和红色基因传承贡献青年智慧。</p>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="media/19.jpg" alt="长期合作书" loading="lazy">
+        <div class="gallery-caption">长期合作书</div>
+      </div>
+      <div class="gallery-item">
+        <img src="media/20.jpg" alt="团队成员合影" loading="lazy">
+        <div class="gallery-caption">团队成员合影~</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section rating-section">
+    <h2>评分体系</h2>
+    <p>请为我们本次的实践活动评分：</p>
+
+    <div class="rating">
+      <!-- 五星评分 -->
+      <div class="stars">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+
+      <!-- 提交按钮 -->
+      <button id="submit-rating" disabled>提交评分</button>
+
+      <!-- 提交结果提示 -->
+      <p id="rating-result" class="hidden">感谢您的评价！祝生活愉快~</p>
+    </div>
+  </section>
+
+</main>
+<!-- 添加到<body>的末尾，</main>之后 -->
+<footer>
+  <div class="container">
+    <p>文案 | 战旗 朱思璇</p>
+    <p>图片 | "五湖薪火，三色先锋"生态文明保护实践团</p>
+    <p>编辑 | 王玥宁</p>
+    <p>审核 | 石和冉 朱思璇</p>
+    <p>网页 | 张艺璠</p>
+    <div class="social-links">
+      <a href="https://mp.weixin.qq.com/s/m1qa0-h6yXJ3E6xKpM8wZw" target="_blank">微信</a>
+      <a href="https://www.xiaohongshu.com/user/profile/66b3630a000000001d0326d2?xsec_token=YBx7YxLH7QCJncHPZkiGwqCGGS1zV_VbY23cJGPIU1uDM%3D&xsec_source=app_share&xhsshare=CopyLink&appuid=6695181b000000000f037e3f&apptime=1754212374&share_id=8e9b3859ea814c3285144b92eb1392f4&share_channel=copy_link" target="_blank">小红书</a>
+      <a href="https://www.douyin.com/video/7530641614478806326" target="_blank">抖音</a>
+      <a href="https://www.bilibili.com/video/BV18zbkzZEF4?vd_source=7a4b1ba2070ab8f848e26e1bdfcbfd4b" target="_blank">B站</a>
+    </div>
+
+    <p>&copy; 2025 南京师范大学-"五湖薪火，三色先锋"生态文明保护实践团 版权所有</p>
+  </div>
+</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const stars = document.querySelectorAll('.star');
+    const submitBtn = document.getElementById('submit-rating');
+    const resultText = document.getElementById('rating-result');
+    let selectedRating = 0;
+
+    // 点击星星评分
+    stars.forEach(star => {
+      star.addEventListener('click', function() {
+        const value = parseInt(this.getAttribute('data-value'));
+        selectedRating = value;
+
+        // 更新星星样式
+        stars.forEach((s, index) => {
+          s.classList.toggle('active', index < value);
+        });
+
+        // 启用提交按钮
+        submitBtn.disabled = false;
+      });
+    });
+
+    // 提交评分
+    submitBtn.addEventListener('click', function() {
+      // 显示提交结果
+      resultText.textContent = `感谢您的${selectedRating}星评价！祝生活愉快~`;
+      resultText.classList.remove('hidden');
+
+      // 禁用按钮防止重复提交
+      this.disabled = true;
+
+      // 3秒后重置（可选）
+      setTimeout(() => {
+        stars.forEach(s => s.classList.remove('active'));
+        selectedRating = 0;
+      }, 3000);
+    });
+  });
+</script>
+</body>
+</html>
