@@ -365,14 +365,32 @@ footer {
   font-weight: bold;
   margin-top: 15px;
 }
+    .team-photo-section {
+  text-align: center;
+  margin: 40px 0;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.enlarged-photo {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.large-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+
+.large-photo:hover {
+  transform: scale(1.02);
+}
   </style>
 </head>
-
-
-
-
-
-
 <body>
 <header>
   <div class="container">
@@ -512,8 +530,8 @@ footer {
         <div class="gallery-caption">感谢信</div>
       </div>
       <div class="gallery-item">
-        <img src="media/18%20(2).jpg" alt="感谢信" loading="lazy">
-        <div class="gallery-caption">感谢信-续</div>
+        <img src="media/19.jpg" alt="长期合作书" loading="lazy">
+        <div class="gallery-caption">长期合作书</div>
       </div>
     </div>
   </section>
@@ -522,14 +540,10 @@ footer {
     <h2>薪火相传，展望五湖征程</h2>
     <p>此次洪泽湖之行，是"五湖薪火，三色先锋"生态文明保护实践团探索之旅的起点。未来，团队将秉持初心，在此次实践的基础上走遍中国五大湖，深入研究各湖区在融合绿色生态保护与红色精神传承过程中的多样化路径与创新经验，持续为生态文明建设和红色基因传承贡献青年智慧。</p>
 
-    <div class="gallery">
-      <div class="gallery-item">
-        <img src="media/19.jpg" alt="长期合作书" loading="lazy">
-        <div class="gallery-caption">长期合作书</div>
-      </div>
-      <div class="gallery-item">
-        <img src="media/20.jpg" alt="团队成员合影" loading="lazy">
-        <div class="gallery-caption">团队成员合影~</div>
+   <div class="team-photo-section">
+      <h2>团队成员合影</h2>
+      <div class="enlarged-photo">
+        <img src="media/20.jpg" alt="团队成员合影" class="large-photo">
       </div>
     </div>
   </section>
@@ -616,4 +630,5 @@ footer {
   });
 </script>
 </body>
+
 </html>
